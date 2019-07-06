@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN8rsOUuhp.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+input {
+    outline-style: none;
+}
+
+::placeholder {
+    color: #CCC;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+html {
+    opacity: 0;
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%; 
+    background: #003D59;
+}
+
+.header {
+    color: #F0EDF6;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 0 0 20px 0;
+}
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    min-width: 800px;
+    height: 37px;
+}
+
+#location {
+    width: 100%;
+    color: #CCC;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 16px;
+    border: 3px solid #F0EDF6;
+    border-radius: 8px;
+}
+
+.weatherBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 800px;
+    width: 60%;
+    height: 150px;
+    margin: 10px 0 0 0;
+    padding: 10px 0;
+    opacity: 0.85;
+    background-color: #F0EDF6;
+}
+
+#leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#rightBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#bubble {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#bubble img {
+    align-self: center;
+    margin: 0 10px 0 0;
+}
+
+.weatherBox p {
+    font-family: 'Open Sans';
+    letter-spacing: 1px;
+    margin: 10px 0;
+    color: #003D59;
+}
+
+.currentTempText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+.detailText {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .weatherBox, #searchBar {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .weatherBox {
+        flex-direction: column;
+        height: 280px;
+    }
+
+    #location {
+        border: 0;
+        border-radius: 0;
+        background-color: #F0EDF6;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        color: #003D59;
+    }
+
+    ::placeholder {
+        color: #003D59;
+    }
+
+    #leftBox, #rightBox {
+        width: 100%;
+        min-width: 350px;
+    }
+
+    .detailText {
+        font-size: 18px;
+    }
+
+}

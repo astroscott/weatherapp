@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="./weatherAppResources/reset.css" />
+        <link rel="stylesheet" href="./weatherAppResources/style.css" />
+    </head>
+    <body>
+        <h1 class='header'>.getWeather()</h1>
+        <form id="searchBar">
+            <input id='location' name='location' type='text' placeholder="Enter a City Name" required autocomplete="off">
+        </form>
+        <div class='weatherBox'>
+            <div id="leftBox">
+                <p class="detailText"><span id="city"></span>, <span id="state"></span></p>
+                <div id="bubble">
+                    <img id="icon" src="">
+                    <p class="currentTempText"><span id="currentTemp"></span>&deg</p>
+                </div>
+                <p class="detailText"><span id="condition"></span></p>
+            </div>
+            <div id="rightBox">
+                <p class="detailText"><span class="bold">Wind: </span><span id="wind"></span> mph, <span id="direction"></span></p>
+                <p class="detailText"><span class="bold">High/Low: </span><span id="high"></span>&deg / <span id="low"></span>&deg</p>
+                <p class="detailText"><span class="bold">Humidity: </span><span id="humidity"></span>%</p>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="./weatherAppResources/main.js"></script>
+</html>
